@@ -5,7 +5,7 @@
 winCount=0;
 loseCount=0;
 compRanNum;
-userChoice=0;
+userButtonAdd=0;
 
 
 //computer generated randon numbers
@@ -47,7 +47,7 @@ userChoice=0;
     });    
     
 //
-
+    
 
 //
 

@@ -7,6 +7,8 @@ header {
     text-align:center;
     }
 main {
+    float:left;
+    width: 890px;
     background-image: url(../images/background2.png);
     color: white;
     align-content:auto;
@@ -14,6 +16,7 @@ main {
     margin: 10px 100px 10px 100px;
 }
 footer {
+    clear: both;
     background-color:red;
     color:white;
     text-align: center;
@@ -35,4 +38,25 @@ footer {
 }
 #crystalImage {
     clear: both;
+}
+sidebar {
+    size:auto;
+    margin-right:370px;
+    margin-left: 10px;
+    width: 100px;
+    float:right;
+    background-color: black;
+    font-size:45pt;
+}
+#winCount {
+    color:white;
+
+}
+
+#loseCount {
+    color:red;
+}
+.score {
+    font-family:courier;
+    font-size: 24pt;
 }
