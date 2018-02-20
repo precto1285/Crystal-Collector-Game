@@ -1,35 +1,93 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <title>Crystal Collector</title>
+<html lang="en">
+
+<head>
+    <title>Crystal Collector</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" , type="text/css" , href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" , type="text/css" , href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <header class="jumbotron">
+        <h1 class="display-4">Gem Collector</h1>
+    </header>
+
+    <main>
+        <div id="instructions">
+            <h2>Instructions:</h2>
+            <p>
+                    ### Option One: CrystalsCollector Game (Recommended)<br>
+                    <br>
+                    ![Crystal Collector](Images/1-CrystalCollector.jpg)<br>
+                    <br>
+                    1. [Watch the demo](homework_demos/crystalsCollector_demo.mp4).<br>
+                    <br>
+                    2. The player will have to guess the answer, just like in Hangman. This time, though, the player will guess with numbers instead of letters. <br>
+                    <br>
+                    3. Here's how the app works:<br>
+                    <br>
+                       * There will be four crystals displayed as buttons on the page.<br>
+                       <br>
+                       * The player will be shown a random number at the start of the game.<br>
+                       <br>
+                       * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. <br>
+                       <br>
+                         * Your game will hide this amount until the player clicks a crystal.<br>
+                         * When they do click one, update the player's score counter.<br>
+                         <br>
+                       * The player wins if their total score matches the random number from the beginning of the game.<br>
+                       <br>
+                       * The player loses if their score goes above the random number.<br>
+                       <br>
+                       * The game restarts whenever the player wins or loses.<br>
+                       <br>
+                         * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.<br>
+                         <br>
+                       * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.<br>
+                       <br>
+                    ##### Option 1 Game design notes<br>
+                    <br>
+                    * The random number shown at the start of the game should be between 19 - 120.<br>
+                    <br>
+                    * Each crystal should have a random hidden value between 1 - 12.<br>
+            </p>
+        </div>
         
-        <link rel="stylesheet", type="text/css", href="assets/css/reset.css">
+        <div id=game>    
+            <div id="computerPick" class="randomNumber"></div>
 
-        <link rel="stylesheet", type="text/css", href="assets/css/style.css">
+            <div id="crystalImage">
+                    <button type="button" class="btn btn-dark"><img src="assets/images/soul.png" alt="Soul Gem" width="50px" height="100px"/></button>
+                    <button type="button" class="btn btn-dark"><img src="assets/images/time.png" alt="Time Gem" width="50px" height="100px"/></button>
+                    <button type="button" class="btn btn-dark"><img src="assets/images/reality.png" alt="Reality Gem" width="50px" height="100px"/></button>
+                    <button type="button" class="btn btn-dark"><img src="assets/images/power.png" alt="Power Gem" width="50px" height="100px"/></button>
+                    <button type="button" class="btn btn-dark"><img src="assets/images/mind.png" alt="Mind Gem" width="50px" height="100px"/></button>
+                    <button type="button" class="btn btn-dark"><img src="assets/images/space.png" alt="Space Gem" width="50px" height="100px"/></button>
+            </div>
+        
+        </div>
+    </main>
 
-    </head>
-    <body>
+    <sidebar>
+        <div id="userClick" class="randomNumber"></div>
+        
+        <div id="winCount" class="score"></div>
 
-        <header>
-            <h1>Crystal Collector</h1>
-        </header>
+        <div id="loseCount" class="score"></div>
+    </sidebar>
 
-        <main>
-            <div id = "instructions"></div>
-            <div id ="computerPick" class = "randomNumber"></div>
-            <div id = "crystalImage"></div>
-        </main>
+    <footer>
+        <h4>copyright &copy; 2018 Philippe Recto</h4>
+    </footer>
 
-        <sidebar>
-            <div id = "userClick" class = "randomNumber"></div>
-            <div id = "winCount" class = "score"></div>
-            <div id = "loseCount" class = "score"></div>
-        </sidebar>
+</body>
 
-        <footer>
-                <h4>copyright &copy; 2018 Philippe Recto</h4>
-        </footer>
-
-    </body>
 </html>
