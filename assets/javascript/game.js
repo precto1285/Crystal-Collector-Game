@@ -4,22 +4,25 @@
 //global variables
 winCount = 0;
 loseCount = 0;
-compRanNum = '';
-userRanNum = '';
+compRanNum = 0;
+userRanNum = 0;
 userButtonAdd = 0;
 
 
 //computer generated randon numbers
-
+$("#computerPick").append(function() {
 compRanNum = Math.floor((Math.random() * 12) + 1);
-$("#computerPick").html('compRanNum');
+
+});
+
+
 //apply function for buttons for user choice
 
 //button 1 soul gem onclick:
 $("#soul").click(function () {
     var soulNum = Math.floor((Math.random() * 120) + 19);
     $(this).hide();
-    soulNum += userRanNum;
+    $('#userNumbers').append(soulNum + userRanNum);
 
 });
 
@@ -27,22 +30,22 @@ $("#soul").click(function () {
 $("#time").click(function () {
     var timeNum = Math.floor((Math.random() * 120) + 19);
     $(this).hide();
-    timeNum += userRanNum;
-};
+    $('#userNumbers').append(timeNum + userRanNum);
+});
 
 //button 3 reality gem onclick:
 $("#reality").click(function () {
     var realityNum = Math.floor((Math.random() * 120) + 19);
     $(this).hide();
-    realityNum += userRanNum;
-};
+    $('#userNumbers').append(realityNum + userRanNum);
+});
 
 
 //button 4 power gem onclick:
 $("#power").click(function () {
     var powerNum = Math.floor((Math.random() * 120) + 19);
     $(this).hide();
-    powerNum += userRanNum;
+    $('#userNumbers').append(powerNum + userRanNum);
 });
 
 
@@ -50,7 +53,7 @@ $("#power").click(function () {
 $("#mind").click(function () {
     var mindNum = Math.floor((Math.random() * 120) + 19);
     $(this).hide();
-    mindNum += userRanNum;
+    $('#userNumbers').append(mindNum + userRanNum);
 });
 
 
@@ -58,7 +61,7 @@ $("#mind").click(function () {
 $("#space").click(function () {
     Math.floor((Math.random() * 120) + 19);
     $(this).hide();
-    spaceNum += userRanNum;
+    $('#userNumbers').append(spaceNum + userRanNum);
 });
 
 //
