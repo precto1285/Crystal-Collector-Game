@@ -1,5 +1,7 @@
 body {
     background-image: url(../images/background.png);
+    background-size:100%;
+    align-content:center;
     
 }
 
@@ -8,24 +10,25 @@ header {
     }
 main {
     float:left;
-    width: 890px;
+    width: 1000px;
     background-image: url(../images/background2.png);
     color: white;
-    align-content:auto;
-    padding: 10px 100px 10px 100px;
-    margin: 10px 100px 10px 100px;
+    align-content:center;
+    padding: 100px;
+    margin-left: 500px;
 }
 footer {
     clear: both;
     background-color:red;
     color:white;
     text-align: center;
-    padding: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
    
 }
 .randomNumber {
-    margin: 10px;
-    padding: 10px;
+    margin: 50px;
+    padding: 50px;
     text-align: center;
     background-color: black;
     color: white;
@@ -34,26 +37,27 @@ footer {
     float:left;
 }
 #userNumbers {
-    float: right;
+    float: left;
 }
 #crystalImage {
     clear: both;
 }
 sidebar {
-    size:auto;
-    margin-right:370px;
     margin-left: 10px;
-    width: 100px;
-    float:right;
+    padding: 45px;
+    width: 500px;
+    float:left;
     background-color: black;
     font-size:45pt;
 }
 #winCount {
+    padding: 50px;
     color:white;
 
 }
 
 #loseCount {
+    padding: 50px;
     color:red;
 }
 .score {

@@ -12,7 +12,7 @@ userButtonAdd = 0;
 //computer generated randon numbers
 $("#computerPick").append(function() {
 compRanNum = Math.floor((Math.random() * 12) + 1);
-
+    
 });
 
 
@@ -20,48 +20,41 @@ compRanNum = Math.floor((Math.random() * 12) + 1);
 
 //button 1 soul gem onclick:
 $("#soul").click(function () {
-    var soulNum = Math.floor((Math.random() * 120) + 19);
-    $(this).hide();
-    $('#userNumbers').append(soulNum + userRanNum);
-
+    var soulNum = $(Math.floor((Math.random() * 120) + 19)).val();
+    $("#userNumbers").append(parsInt(userRanNum) + parseInt(soulNum));
 });
 
 //button 2 time gem onclick:
 $("#time").click(function () {
-    var timeNum = Math.floor((Math.random() * 120) + 19);
-    $(this).hide();
-    $('#userNumbers').append(timeNum + userRanNum);
+    var timeNum = $(Math.floor((Math.random() * 120) + 19)).val();
+    $("#userNumbers").append(parsInt(userRanNum) + parseInt(timeNum));
 });
 
 //button 3 reality gem onclick:
 $("#reality").click(function () {
-    var realityNum = Math.floor((Math.random() * 120) + 19);
-    $(this).hide();
-    $('#userNumbers').append(realityNum + userRanNum);
+    var realityNum = $(Math.floor((Math.random() * 120) + 19)).val();
+    $("#userNumbers").append(parsInt(userRanNum) + parseInt(soulNum));
 });
 
 
 //button 4 power gem onclick:
 $("#power").click(function () {
-    var powerNum = Math.floor((Math.random() * 120) + 19);
-    $(this).hide();
-    $('#userNumbers').append(powerNum + userRanNum);
+    var powerNum = $(Math.floor((Math.random() * 120) + 19)).val();
+    $("#userNumbers").append(parsInt(userRanNum) + parseInt(soulNum));
 });
 
 
 //button 5 mind gem onclick:
 $("#mind").click(function () {
-    var mindNum = Math.floor((Math.random() * 120) + 19);
-    $(this).hide();
-    $('#userNumbers').append(mindNum + userRanNum);
+    var mindNum = $(Math.floor((Math.random() * 120) + 19)).val();
+    $("#userNumbers").append(parsInt(userRanNum) + parseInt(soulNum));
 });
 
 
 //button 6 space gem onclick:
 $("#space").click(function () {
-    Math.floor((Math.random() * 120) + 19);
-    $(this).hide();
-    $('#userNumbers').append(spaceNum + userRanNum);
+    var spaceNUm = $(Math.floor((Math.random() * 120) + 19)).val();
+    $("#userNumbers").append(parsInt(userRanNum) + parseInt(soulNum));
 });
 
 //
