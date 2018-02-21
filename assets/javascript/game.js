@@ -53,95 +53,95 @@ $(document).ready(function () {
 
     //button 1 soul gem onclick:
     $("#soul").click("click", function () {
-        var sumOfStones = "";
         var soulNum = Math.floor((Math.random() * 12) + 1);
+        var sumOfStones = "";
         soulNum += userRanNumSoul;
         var numPress = 0;
         if (soulNum > numPress) {
-            soulNum += sumOfStones;
+            $("#userNumbers").html(soulNum += sumOfStones);
         }
         else {
-            userRanNumSoul += sumOfStones;
+            $("#userNumbers").html(userRanNumSoul += sumOfStones);
         }
-        $("#userNumbers").html(sumOfStones);
+        
     });
 
     //button 2 time gem onclick:
     $("#time").click("click", function () {
-        var sumOfStones = "";
         var timeNum = Math.floor((Math.random() * 12) + 1);
+        var sumOfStones = "";
         timeNum += userRanNumTime;
         var numPress = 0;
         if (timeNum > numPress) {
-            timeNum += sumOfStones;
+            $("#userNumbers").html(timeNum += sumOfStones);
         }
         else {
-            userRanNumTime += sumOfStones;
+            $("#userNumbers").html(userRanNumtime += sumOfStones);
         }
-        $("#userNumbers").html(sumOfStones);
+        
     });
 
     //button 3 reality gem onclick:
     $("#reality").click("click", function () {
-        var sumOfStones = "";
         var realityNum = Math.floor((Math.random() * 12) + 1);
+        var sumOfStones = "";
         realityNum += userRanNumReality;
         var numPress = 0;
         if (realityNum > numPress) {
-            realityNum += sumOfStones;
+            $("#userNumbers").html(realityNum += sumOfStones);
         }
         else {
-            userRanNumReality += sumOfStones;
+            $("#userNumbers").html(userRanNumReality += sumOfStones);
         }
-        $("#userNumbers").html(sumOfStones);
+        
     });
 
 
     //button 4 power gem onclick:
     $("#power").click("click", function () {
-        var sumOfStones = "";
         var powerNum = Math.floor((Math.random() * 12) + 1);
+        var sumOfStones = "";
         powerNum += userRanNumPower;
         var numPress = 0;
         if (powerNum > numPress) {
-            powerNum += sumOfStones;
+            $("#userNumbers").html(powerNum += sumOfStones);
         }
         else {
-            userRanNumPower += sumOfStones;
+            $("#userNumbers").html(userRanNumPower += sumOfStones);
         }
-        $("#userNumbers").html(sumOfStones);
+        
     });
 
 
     //button 5 mind gem onclick:
     $("#mind").click("click", function () {
-        var sumOfStones = "";
         var mindNum = Math.floor((Math.random() * 12) + 1);
+        var sumOfStones = "";
         mindNum += userRanNumMind;
         var numPress = 0;
         if (mindNum > numPress) {
-            mindNum += sumOfStones;
+            $("#userNumbers").html(mindNum += sumOfStones);
         }
         else {
-            userRanNumMind += sumOfStones;
+            $("#userNumbers").html(userRanNumMind += sumOfStones);
         }
-        $("#userNumbers").html(sumOfStones);
+        
     });
 
 
     //button 6 space gem onclick
     $("#space").click("click", function () {
-        var sumOfStones = "";
         var spaceNum = Math.floor((Math.random() * 12) + 1);
+        var sumOfStones = "";
         spaceNum += userRanNumSpace;
         var numPress = 0;
         if (spaceNum > numPress) {
-            spaceNum += sumOfStones;
+            $("#userNumbers").html(spaceNum += sumOfStones);
         }
         else {
-            userRanNumSpace += sumOfStones;
+            $("#userNumbers").html(userRanNumSpace += sumOfStones);
         }
-        $("#userNumbers").html(sumOfStones);
+        
     });
 
 
