@@ -34,9 +34,10 @@ footer {
     color: white;
 }
 #computerPick {
+    color:red;
     float:left;
 }
-#userNumbers {
+#masterKey {
     float: left;
 }
 #crystalImage {
@@ -49,6 +50,7 @@ sidebar {
     float:left;
     background-color: black;
     font-size:45pt;
+    height:100%;
 }
 #winCount {
     padding: 50px;
@@ -63,4 +65,9 @@ sidebar {
 .score {
     font-family:courier;
     font-size: 24pt;
+}
+#computerNum {
+    margin:60px;
+    color:gold;
+
 }
