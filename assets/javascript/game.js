@@ -144,24 +144,23 @@ $(document).ready(function () {
         
     });
 
-
-});
-//
-
-
-// Update userNumbers with  $(#userNumbers).append();
-
-
 //if users clicks > computer random number, game over. add +1 to loseCount
 
 
 //if users clicks <= computer random number, winner! add +1 to winCount
 
 
-//
+//reset game;
 
 
 //
 
 
 //
+
+
+});
+
+
+
+
