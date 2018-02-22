@@ -13,8 +13,8 @@ $(document).ready(function () {
     var userRanNumPower = "";
     var userRanNumMind = "";
     var userRanNumSpace = "";
-
-
+    var sumOfStones = "";
+    var numberMatch = false;
 
 
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
         $("#soul, #time, #reality, #power, #mind, #space").empty();
     }
-
+    console.log(sumOfStones);
 
     //computer generated randon numbers
     $("#computerPick").click("click", function () {
@@ -58,12 +58,15 @@ $(document).ready(function () {
         soulNum += userRanNumSoul;
         var numPress = 0;
         if (soulNum > numPress) {
-            $("#userNumbers").html(soulNum += sumOfStones);
-        }
+            $("#userNumbers").html(soulNum)
+         }
         else {
-            $("#userNumbers").html(userRanNumSoul += sumOfStones);
+            $("#userNumbers").html(userRanNumSoul)
         }
-        
+        soulNum += sumOfStones;
+        userRanNumSoul += sumOfStones;
+        console.log(sumOfStones);
+
     });
 
     //button 2 time gem onclick:
@@ -73,12 +76,16 @@ $(document).ready(function () {
         timeNum += userRanNumTime;
         var numPress = 0;
         if (timeNum > numPress) {
-            $("#userNumbers").html(timeNum += sumOfStones);
+            $("#userNumbers").html(timeNum)
+            
         }
         else {
-            $("#userNumbers").html(userRanNumtime += sumOfStones);
+            $("#userNumbers").html(userRanNumTime)
+            
         }
-        
+        timeNum += sumOfStones;
+        userRanNumTime += sumOfStones;
+        console.log(sumOfStones);
     });
 
     //button 3 reality gem onclick:
@@ -88,12 +95,16 @@ $(document).ready(function () {
         realityNum += userRanNumReality;
         var numPress = 0;
         if (realityNum > numPress) {
-            $("#userNumbers").html(realityNum += sumOfStones);
+            $("#userNumbers").html(realityNum)
+            
         }
         else {
-            $("#userNumbers").html(userRanNumReality += sumOfStones);
+            $("#userNumbers").html(userRanNumReality)
+            
         }
-        
+        realityNum += sumOfStones;
+        userRanNumReality += sumOfStones;
+        console.log(sumOfStones);
     });
 
 
@@ -104,12 +115,16 @@ $(document).ready(function () {
         powerNum += userRanNumPower;
         var numPress = 0;
         if (powerNum > numPress) {
-            $("#userNumbers").html(powerNum += sumOfStones);
+            $("#userNumbers").html(powerNum)
+            
         }
         else {
-            $("#userNumbers").html(userRanNumPower += sumOfStones);
+            $("#userNumbers").html(userRanNumPower)
+            
         }
-        
+        powerNum += sumOfStones;
+        userRanNumPower += sumOfStones;
+        console.log(sumOfStones);
     });
 
 
@@ -120,12 +135,16 @@ $(document).ready(function () {
         mindNum += userRanNumMind;
         var numPress = 0;
         if (mindNum > numPress) {
-            $("#userNumbers").html(mindNum += sumOfStones);
+            $("#userNumbers").html(mindNum)
+            
         }
         else {
-            $("#userNumbers").html(userRanNumMind += sumOfStones);
+            $("#userNumbers").html(userRanNumMind)
+            
         }
-        
+        mindNum += sumOfStones;
+        userRanNumMind += sumOfStones;
+        console.log(sumOfStones);
     });
 
 
@@ -136,27 +155,37 @@ $(document).ready(function () {
         spaceNum += userRanNumSpace;
         var numPress = 0;
         if (spaceNum > numPress) {
-            $("#userNumbers").html(spaceNum += sumOfStones);
+            $("#userNumbers").html(spaceNum)
+            
         }
         else {
-            $("#userNumbers").html(userRanNumSpace += sumOfStones);
+            $("#userNumbers").html(userRanNumSpace)
+            
         }
-        
+        spaceNum += sumOfStones;
+        userRanNumSpace += sumOfStones;
+        console.log(sumOfStones);
     });
+        
+    //if users clicks > computer random number, game over. add +1 to loseCount
+        if(sumOfStones === compRanNum){
+            
+        }
+        if(sumOfStones > compRanNum){
 
-//if users clicks > computer random number, game over. add +1 to loseCount
-
-
-//if users clicks <= computer random number, winner! add +1 to winCount
-
-
-//reset game;
-
-
-//
+        }
 
 
-//
+    //if users clicks <= computer random number, winner! add +1 to winCount
+
+
+    //reset game;
+
+
+    //
+
+
+    //
 
 
 });
