@@ -4,43 +4,65 @@
     var compRanNum;
     var winCount = 0;
     var loseCount = 0;
-    var previous = 0;
+    var previousChoice = 0;
 
-
-
+    
     var initializeInfinity = function() {
 
-    $(".userPick").empty();
+    $("#userNumbers", "userPick", "#computerNum").empty();
 
     //computer generated randon numbers
     $("#computerPick").click("click", function () {
-        compRanNum = Math.floor((Math.random() * 120) + 19);
+        compRanNum = Math.floor((Math.random() * 101) + 19);
         $("#computerNum").html(compRanNum);
     });
+    //generate random numbers for user click
+
+    
 
     for (var i = 0; i < 6; i++) {
 
-        var userRandom = Math.floor(Math.random() * 12) + 1;
+        var userRandom = Math.floor(Math.random() * 11) + 1;
 
-        var stones = $("#soul", "#time", "#reality", "#power", "#mind", "#space");
+        var stones = $(".userPick");
         stones.attr({
+            "class": 'crystal',
             "userPick": userRandom
         });
 
-        $(".userPick").append(stones);
+        $(".crystal").append(stones);
 
     }
-    console.log(".userPick");
+        
 }
 
+//start game...
 initializeInfinity();
 
 
-    $(document).on('click', ".userPick", function () {
+    $(document).on('click', ".crystal", function () {
 
-        var num = parseInt($(this).attr('userPick'));
+        var numChoice = parseInt($(this).attr('#userNumbers'));
 
+        previousChoice += numChoice;
 
+        $("#userNumbers").html(previousChoice);
+
+        if (previousChoice > compRanNum) {
+            loseCount++;
+            $("#loseCount").html(loseCount);
+
+            previousChoice = 0;
+            initializeInfinity();
+        }
+        else if (previousChoice === compRanNum) {
+            winCount++;
+            $("#winCount").html(winCount);
+            
+            previousChoice = 0;
+            initializeInfinity();
+        }
+        
 });
 
 /*
