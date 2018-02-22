@@ -1,41 +1,16 @@
 //Use jQuery - - - - 
-$(document).ready(function () {
 
-    //global variables
-    var winCount = "";
-    var loseCount = "";
-
-    var compRanNum = "";
-
-    var userRanNumSoul = "";
-    var userRanNumTime = "";
-    var userRanNumReality = "";
-    var userRanNumPower = "";
-    var userRanNumMind = "";
-    var userRanNumSpace = "";
-    var sumOfStones = "";
-    var numberMatch = false;
+//global variables
+    var compRanNum;
+    var winCount = 0;
+    var loseCount = 0;
+    var previous = 0;
 
 
 
-    function initializeInfinity() {
+    var initializeInfinity = function() {
 
-        var compRanNum = "";
-
-        var userRanNumSoul = "";
-        var userRanNumTime = "";
-        var userRanNumReality = "";
-        var userRanNumPower = "";
-        var userRanNumMind = "";
-        var userRanNumSpace = "";
-
-        var sumOfStones = "";
-
-        var numberMatch = false;
-
-        $("#soul, #time, #reality, #power, #mind, #space").empty();
-    }
-    console.log(sumOfStones);
+    $(".userPick").empty();
 
     //computer generated randon numbers
     $("#computerPick").click("click", function () {
@@ -43,25 +18,46 @@ $(document).ready(function () {
         $("#computerNum").html(compRanNum);
     });
 
+    for (var i = 0; i < 6; i++) {
+
+        var userRandom = Math.floor(Math.random() * 12) + 1;
+
+        var stones = $("#soul", "#time", "#reality", "#power", "#mind", "#space");
+        stones.attr({
+            "userPick": userRandom
+        });
+
+        $(".userPick").append(stones);
+
+    }
+    console.log(".userPick");
+}
+
+initializeInfinity();
 
 
+    $(document).on('click', ".userPick", function () {
+
+        var num = parseInt($(this).attr('userPick'));
 
 
+});
 
-
+/*
     //apply function for buttons for user choice
 
     //button 1 soul gem onclick:
+
     $("#soul").click("click", function () {
         var soulNum = Math.floor((Math.random() * 12) + 1);
         var sumOfStones = "";
         soulNum += userRanNumSoul;
         var numPress = 0;
         if (soulNum > numPress) {
-            $("#userNumbers").html(soulNum)
+            $("#userNumbers").html(soulNum);
          }
         else {
-            $("#userNumbers").html(userRanNumSoul)
+            $("#userNumbers").html(userRanNumSoul);
         }
         soulNum += sumOfStones;
         userRanNumSoul += sumOfStones;
@@ -186,10 +182,6 @@ $(document).ready(function () {
 
 
     //
-
-
-});
-
-
+*/
 
 
