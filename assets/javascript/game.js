@@ -1,78 +1,125 @@
 //Use jQuery - - - - 
 
 //global variables
-    var compRanNum;
-    var winCount = 0;
-    var loseCount = 0;
-    var previousChoice = 0;
+var compRanNum = 0;
+var winCount = 0;
+var loseCount = 0;
+var userCountMain = 0;
+var userPick = 0;
 
-    
-    var initializeInfinity = function() {
 
-    $("#userNumbers", "userPick", "#computerNum").empty();
+$(document).on("click", function () {
+
+    if (userCountMain === compRanNum) {
+        alert("You Win");
+        winCount = winCount + 1;
+        $("#winCount").html(winCount);
+        userCountMain = 0;
+        initializeInfinity();
+    }
+
+    else if (userCountMain > compRanNum) {
+        alert("You Lose");
+        loseCount = loseCount + 1;
+        $("#loseCount").html(loseCount);
+        userCountMain = 0;
+        initializeInfinity();
+    }
+
+
+});
+
+
+
+var initializeInfinity = function () {
+
+    $("#userNumbers", "userPick", "#computerNum").empty();    
 
     //computer generated randon numbers
-    $("#computerPick").click("click", function () {
+    $("#computerPick").on("click", function () {
         compRanNum = Math.floor((Math.random() * 101) + 19);
         $("#computerNum").html(compRanNum);
     });
-    //generate random numbers for user click
 
-    
 
-    for (var i = 0; i < 6; i++) {
+    $("#soul").on("click", function () {
+        userPick = Math.floor((Math.random() * 11) + 1);
+        userCountMain = userCountMain + userPick;
 
-        var userRandom = Math.floor(Math.random() * 11) + 1;
+        $("#userNumbers").html(userCountMain);
+    });
+    $("#time").on("click", function () {
+        userPick = Math.floor((Math.random() * 11) + 1);
+        userCountMain = userCountMain + userPick;
 
-        var stones = $(".userPick");
-        stones.attr({
-            "class": 'crystal',
-            "userPick": userRandom
-        });
+        $("#userNumbers").html(userCountMain);
+    });
+    $("#reality").on("click", function () {
+        userPick = Math.floor((Math.random() * 11) + 1);
+        userCountMain = userCountMain + userPick;
 
-        $(".crystal").append(stones);
+        $("#userNumbers").html(userCountMain);
+    });
+    $("#power").on("click", function () {
+        userPick = Math.floor((Math.random() * 11) + 1);
+        userCountMain = userCountMain + userPick;
 
-    }
-        
+        $("#userNumbers").html(userCountMain);
+    });
+    $("#mind").on("click", function () {
+        userPick = Math.floor((Math.random() * 11) + 1);
+        userCountMain = userCountMain + userPick;
+
+        $("#userNumbers").html(userCountMain);
+    });
+    $("#space").on("click", function () {
+        userPick = Math.floor((Math.random() * 11) + 1);
+        userCountMain = userCountMain + userPick;
+
+        $("#userNumbers").html(userCountMain);
+    });
+
 }
 
 //start game...
 initializeInfinity();
 
 
-    $(document).on('click', ".crystal", function () {
 
-        var numChoice = parseInt($(this).attr('#userNumbers'));
 
-        previousChoice += numChoice;
 
-        $("#userNumbers").html(previousChoice);
-
-        if (previousChoice > compRanNum) {
-            loseCount++;
-            $("#loseCount").html(loseCount);
-
-            previousChoice = 0;
-            initializeInfinity();
-        }
-        else if (previousChoice === compRanNum) {
-            winCount++;
-            $("#winCount").html(winCount);
-            
-            previousChoice = 0;
-            initializeInfinity();
-        }
-        
-});
 
 /*
+
+
+
+
+
+
+
+
+
+
+$(document).on('click', ".crystal", function () {
+
+
+
+    var numChoice = parseInt($(this).attr('#userNumbers'));
+
+    userCountMain += numChoice;
+
+  // $("#userNumbers").html(userCountMain);
+*/
+/*
+});
+
+
     //apply function for buttons for user choice
 
     //button 1 soul gem onclick:
 
     $("#soul").click("click", function () {
         var soulNum = Math.floor((Math.random() * 12) + 1);
-        var sumOfStones = "";
         soulNum += userRanNumSoul;
         var numPress = 0;
         if (soulNum > numPress) {
@@ -90,7 +137,6 @@ initializeInfinity();
     //button 2 time gem onclick:
     $("#time").click("click", function () {
         var timeNum = Math.floor((Math.random() * 12) + 1);
-        var sumOfStones = "";
         timeNum += userRanNumTime;
         var numPress = 0;
         if (timeNum > numPress) {
@@ -109,7 +155,6 @@ initializeInfinity();
     //button 3 reality gem onclick:
     $("#reality").click("click", function () {
         var realityNum = Math.floor((Math.random() * 12) + 1);
-        var sumOfStones = "";
         realityNum += userRanNumReality;
         var numPress = 0;
         if (realityNum > numPress) {
@@ -129,7 +174,6 @@ initializeInfinity();
     //button 4 power gem onclick:
     $("#power").click("click", function () {
         var powerNum = Math.floor((Math.random() * 12) + 1);
-        var sumOfStones = "";
         powerNum += userRanNumPower;
         var numPress = 0;
         if (powerNum > numPress) {
@@ -149,7 +193,6 @@ initializeInfinity();
     //button 5 mind gem onclick:
     $("#mind").click("click", function () {
         var mindNum = Math.floor((Math.random() * 12) + 1);
-        var sumOfStones = "";
         mindNum += userRanNumMind;
         var numPress = 0;
         if (mindNum > numPress) {
@@ -169,7 +212,6 @@ initializeInfinity();
     //button 6 space gem onclick
     $("#space").click("click", function () {
         var spaceNum = Math.floor((Math.random() * 12) + 1);
-        var sumOfStones = "";
         spaceNum += userRanNumSpace;
         var numPress = 0;
         if (spaceNum > numPress) {
