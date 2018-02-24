@@ -6,6 +6,12 @@ var winCount = 0;
 var loseCount = 0;
 var userCountMain = 0;
 var userPick = 0;
+var userPick1;
+var userPick2;
+var userPick3;
+var userPick4;
+var userPick5;
+var userPick6;
 
 
 $(document).on("click", function () {
@@ -36,6 +42,22 @@ var initializeInfinity = function () {
     $("#userNumbers").empty();
     $("#computerNum").empty();
 
+
+    
+    function randomNumber() {
+        return Math.floor((Math.random() * 11) + 1);  
+    }
+
+
+    userPick1 = randomNumber();
+    userPick2 = randomNumber();
+    userPick3 = randomNumber();
+    userPick4 = randomNumber();
+    userPick5 = randomNumber();
+    userPick6 = randomNumber();
+
+
+
     //computer generated randon numbers
     $("#computerPick").on("click", function () {
         compRanNum = Math.floor((Math.random() * 101) + 19);
@@ -44,42 +66,36 @@ var initializeInfinity = function () {
 
 
     //user generated random numbers
-    $("#soul").on("click", function () {
-        userPick = Math.floor((Math.random() * 11) + 1);
-        userCountMain = userCountMain + userPick;
+    $("#soul").on("click", function () {    
+        userCountMain = userCountMain + userPick1;
         $("#userNumbers").html(userCountMain);
     });
 
-    $("#time").on("click", function () {
-        userPick = Math.floor((Math.random() * 11) + 1);
-        userCountMain = userCountMain + userPick;
+    $("#time").on("click", function () {    
+        userCountMain = userCountMain + userPick2;
         $("#userNumbers").html(userCountMain);
     });
 
-    $("#reality").on("click", function () {
-        userPick = Math.floor((Math.random() * 11) + 1);
-        userCountMain = userCountMain + userPick;
+    $("#reality").on("click", function () {    
+        userCountMain = userCountMain + userPick3;
         $("#userNumbers").html(userCountMain);
     });
 
-    $("#power").on("click", function () {
-        userPick = Math.floor((Math.random() * 11) + 1);
-        userCountMain = userCountMain + userPick;
+    $("#power").on("click", function () {    
+        userCountMain = userCountMain + userPick4;
         $("#userNumbers").html(userCountMain);
     });
 
-    $("#mind").on("click", function () {
-        userPick = Math.floor((Math.random() * 11) + 1);
-        userCountMain = userCountMain + userPick;
+    $("#mind").on("click", function () {    
+        userCountMain = userCountMain + userPick5;
         $("#userNumbers").html(userCountMain);
     });
 
     $("#space").on("click", function () {
-        userPick = Math.floor((Math.random() * 11) + 1);
-        userCountMain = userCountMain + userPick;
+        userCountMain = userCountMain + userPick6;
         $("#userNumbers").html(userCountMain);
     });
-
+s
     $("#reset").on("click", function () {
         $("#userNumbers").empty();
         $("#computerNum").empty();
