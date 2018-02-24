@@ -13,6 +13,7 @@ $(document).on("click", function () {
     if (userCountMain === compRanNum) {
         alert("You Win");
         winCount = winCount + 1;
+        userCountMain = 0;
         $("#winCount").html(winCount);
         $("#userNumbers", "#computerNum").empty();
         initializeInfinity();
@@ -21,6 +22,7 @@ $(document).on("click", function () {
     else if (userCountMain > compRanNum) {
         alert("You Lose");
         loseCount = loseCount + 1;
+        userCountMain = 0;
         $("#loseCount").html(loseCount);
         $("#userNumbers", "#computerNum").empty();
         initializeInfinity();
@@ -32,13 +34,13 @@ $(document).on("click", function () {
 var initializeInfinity = function () {
     //clear values
     $("#userNumbers").empty();
-    $("#computerNum").empty();        
+    $("#computerNum").empty();
 
-        //computer generated randon numbers
-        $("#computerPick").on("click", function () {
-            compRanNum = Math.floor((Math.random() * 101) + 19);
-            $("#computerNum").html(compRanNum);
-        });
+    //computer generated randon numbers
+    $("#computerPick").on("click", function () {
+        compRanNum = Math.floor((Math.random() * 101) + 19);
+        $("#computerNum").html(compRanNum);
+    });
 
 
     //user generated random numbers
@@ -78,7 +80,9 @@ var initializeInfinity = function () {
         $("#userNumbers").html(userCountMain);
     });
 
-    $("#reset").on("click", function (){
+    $("#reset").on("click", function () {
+        $("#userNumbers").empty();
+        $("#computerNum").empty();
         initializeInfinity();
     });
 }
