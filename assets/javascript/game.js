@@ -95,7 +95,7 @@ var initializeInfinity = function () {
         userCountMain = userCountMain + userPick6;
         $("#userNumbers").html(userCountMain);
     });
-s
+
     $("#reset").on("click", function () {
         $("#userNumbers").empty();
         $("#computerNum").empty();
